@@ -86,7 +86,25 @@ for (int i=0;i<n;++i)
 
 
 
+Question 4 
+chep cai report 1 trang vao :))
 
+question 5
+Part A:
+B default cstr
+B copy cstr
+Part B
+B cstr with 2
+D cstr with 2 args
+B default cstr
+B::doTest
+B::doTest
+B dest
+D dest 
+B dest 
+Finished
+B dest
+B dest
 
 
 
