@@ -1,0 +1,59 @@
+﻿Q1: 
+When class D inherits from class B, 
+D’s constructor will run first, then B’s constructor.
+D’s default constructor will be called. If you want to called D’s constructor will argument, you have to use initialization list.
+Example
+
+
+
+class D
+{
+	public:
+	D()
+	{
+	cout<<"D default constructor \n"
+	}
+	
+	D(int a)
+	{
+	cout<<"D constructor with "<<a<<"  \n";
+	}
+};
+
+class B
+{
+	public :
+	B()
+	{
+	cout<<"B default constructor \n"
+	}
+	
+	B(int m)
+	{
+	cout<<"B constructor with "<<a<<"  \n";
+	}
+	
+	B(int a,int b):D(a)
+	{
+	cout<<"B constructor with "<<a<<" and "<<b<<" \n";
+	}
+}
+
+int main()
+{
+	B b;
+	B bb(1);
+	B bbb(2,3);
+}
+
+output 
+D default constructor 
+B default constructor 
+D default constructor 
+B constructor with 1
+D constructor with 2
+B constructor with 2 and 3
+
+
+Question 2
+Di
