@@ -98,7 +98,7 @@ B cstr with 2
 D cstr with 2 args
 B default cstr
 B::doTest
-B::doTest
+D::doTest
 B dest
 D dest 
 B dest 

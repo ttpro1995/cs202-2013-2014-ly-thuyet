@@ -1,0 +1,78 @@
+#include <iostream>
+using namespace std;
+
+class B{
+	B()
+	{
+		cout <<"B default cstr "<<endl;
+	}
+	
+	B(int i){
+		cout <<"B cstr with "<<i<<endl;
+	}
+	
+	B(const B& src)
+	{
+		cout<<"B copy cstr" <<endl;
+	}
+	
+	B& operator=(const B& rhs){
+		cout<<"Assignment of B"<<endl;
+	}
+	
+	~B(){
+		cout <<"B dest "<<endl;
+	}
+	
+	virtual void doTest() const{
+		cout <<"B::doTest"<<endl;
+	}
+	
+}
+
+class D: public B{
+	D()
+	{
+		cout <<"D default cstr "<<endl;
+	}
+	
+	D(int i,int k):B(t)
+	{
+		cout <<"D cstr with 2 args "<<endl;
+	}
+	
+	
+	
+	D& operator=(const D& rhs){
+		cout<<"Assignment of D"<<endl;
+	}
+	
+	~D(){
+		cout <<"D dest "<<endl;
+	}
+	
+	void doTest() const{
+		cout <<"D::doTest"<<endl;
+	}
+	
+}
+
+void doSth(B b1, B* pd){
+	b1.doTest();
+	pb->doTest();
+}
+
+int main()
+{
+	cout<<"Part A "<<endl;
+	B first;
+	B second = first;
+	
+	cout<<"Part B: "<<endl;
+	D* pb = new D(2,7);
+	doSth(second,pd);
+	delete pd;
+	
+	cout<<"Finished !!!"<<endl;
+	return 0;
+}
