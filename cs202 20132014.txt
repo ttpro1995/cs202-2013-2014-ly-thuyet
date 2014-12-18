@@ -56,4 +56,49 @@ B constructor with 2 and 3
 
 
 Question 2
-Di
+Diamond problem happen when class B and class C inherit from class A, and class D inherit from class B, class C.
+Then D called a method in A which B and C have overriden it differently.
+To resolve it, we change class B and class C virtual inherit class A.
+
+Question 3
+when the exception is throw, p will not be deleted, which cause memory leak.
+
+We can use vector<int> instead of pointer int* to make it safer
+
+void test(int n)
+{
+vector <int>p;
+p.resize(n);
+
+for (int i=0;i<n;++i)
+{
+	p[i] = calElement(i);
+	//
+	
+	//
+	if (p[i]==0)
+	throw "Exception element i got zero";
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
